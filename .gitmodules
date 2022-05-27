@@ -1,0 +1,3 @@
+[submodule "exercises/test-runner"]
+	path = exercises/test-runner
+	url = https://github.com/magalhaesm/test-runner.git

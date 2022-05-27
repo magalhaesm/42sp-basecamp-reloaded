@@ -1,0 +1,69 @@
+Running main() from /home/marcelo/prj/42basecamp-reloaded/exercises/tests/main.c
+
+[7;32m PASS [0m ../ex06/test_ft_print_alphabet.c
+[1;32m  ✓[0m test_write_alphabet_to_stdout
+
+[7;32m PASS [0m ../ex07/test_ft_print_numbers.c
+[1;32m  ✓[0m test_write_numbers_to_stdout
+
+[7;32m PASS [0m ../ex08/test_ft_is_negative.c
+[1;32m  ✓[0m test_42_is_positive
+[1;32m  ✓[0m test_zero_is_positve
+[1;32m  ✓[0m test_negavive_prints_N
+
+[7;32m PASS [0m ../ex09/test_ft_ft.c
+[1;32m  ✓[0m test_if_sets_the_value_to_42
+
+[7;32m PASS [0m ../ex10/test_ft_swap.c
+[1;32m  ✓[0m test_if_swaps_the_values
+
+[7;32m PASS [0m ../ex11/test_ft_div_mod.c
+[1;32m  ✓[0m test_if_stores_the_results_correctly
+
+[7;32m PASS [0m ../ex12/test_ft_iterative_factorial.c
+[1;32m  ✓[0m test_iterative_fact_of_negative_is_zero
+[1;32m  ✓[0m test_iterative_fact_of_zero_is_one
+[1;32m  ✓[0m test_iterative_fact_of_5_is_120
+[1;32m  ✓[0m test_iterative_fact_of_12_is_479001600
+[1;32m  ✓[0m test_iterative_fact_greater_than_12_returns_0
+
+[7;32m PASS [0m ../ex13/test_ft_recursive_factorial.c
+[1;32m  ✓[0m test_recursive_fact_of_negative_is_zero
+[1;32m  ✓[0m test_recursive_fact_of_zero_is_one
+[1;32m  ✓[0m test_recursive_fact_of_5_is_120
+[1;32m  ✓[0m test_recursive_fact_of_12_is_479001600
+[1;32m  ✓[0m test_recursive_fact_greater_than_12_returns_0
+
+[7;32m PASS [0m ../ex14/test_ft_sqrt.c
+[1;32m  ✓[0m test_sqrt_of_negative_is_zero
+[1;32m  ✓[0m test_sqrt_of_zero_is_zero
+[1;32m  ✓[0m test_sqrt_of_one_is_one
+[1;32m  ✓[0m test_sqrt_of_irrational_number_is_zero
+[1;32m  ✓[0m test_sqrt_of_25_is_5
+
+[7;32m PASS [0m ../ex15/test_ft_putstr.c
+[1;32m  ✓[0m test_write_string_to_stdout
+
+[7;32m PASS [0m ../ex16/test_ft_strlen.c
+[1;32m  ✓[0m test_if_behave_like_strlen_with_lowercase_strings
+[1;32m  ✓[0m test_if_behave_like_strlen_with_uppercase_strings
+[1;32m  ✓[0m test_if_behave_like_strlen_with_mixedcase_strings
+[1;32m  ✓[0m test_if_behave_like_strlen_with_void_strings
+[1;32m  ✓[0m test_if_behave_like_strlen_with_non_printable_chars
+
+[7;32m PASS [0m ../ex17/test_ft_strcmp.c
+[1;32m  ✓[0m test_if_behave_like_strcmp_with_different_lowercase_strings
+[1;32m  ✓[0m test_if_behave_like_strcmp_with_different_uppercase_strings
+[1;32m  ✓[0m test_if_behave_like_strcmp_with_different_mixedcase_strings
+[1;32m  ✓[0m test_if_behave_like_strcmp_with_void_and_non_void_strings
+[1;32m  ✓[0m test_if_behave_like_strcmp_with_non_printable_chars
+
+[7;32m PASS [0m ../ex18/test_ft_print_params.c
+[1;32m  ✓[0m test_with_no_params
+[1;32m  ✓[0m test_with_one_param
+[1;32m  ✓[0m test_with_more_than_one_param
+
+[7;32m PASS [0m ../ex19/test_ft_sort_params.c
+[1;32m  ✓[0m test_sort_with_no_params
+[1;32m  ✓[0m test_sort_with_one_param
+[1;32m  ✓[0m test_sort_with_more_than_one_param
