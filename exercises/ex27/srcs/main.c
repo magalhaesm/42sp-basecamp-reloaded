@@ -21,7 +21,7 @@ int	main(int argc, char *argv[])
 	else
 	{
 		ft_display_file(argv[1]);
-		return (0);
+		return (EXIT_SUCESS);
 	}
-	return (1);
+	return (EXIT_FAILURE);
 }
