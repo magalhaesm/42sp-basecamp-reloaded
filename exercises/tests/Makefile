@@ -21,6 +21,8 @@ EX20 = ../ex20/*.c
 EX21 = ../ex21/*.c
 EX22 = ../ex22/*.c
 EX23 = ../ex23/*.c
+EX25 = ../ex25/*.c
+EX26 = ../ex26/*.c
 
 EXERCISES = $(HELP) \
 						$(EX06) $(EX07) $(EX08) \
@@ -28,7 +30,8 @@ EXERCISES = $(HELP) \
 						$(EX12) $(EX13) $(EX14) \
 						$(EX15) $(EX16) $(EX17) \
 						$(EX18) $(EX19) $(EX20) \
-						$(EX21) $(EX22) $(EX23)
+						$(EX21) $(EX22) $(EX23) \
+						$(EX25) $(EX26)
 
 all:
 	@gcc -g $(FLAGS) $(RUNNER) $(EXERCISES) main.c -o a.out

@@ -29,7 +29,12 @@
 #include "../ex23/ft_point.h"
 #include "../ex23/test_ft_point.h"
 
+#include "../ex25/ft_foreach.h"
+#include "../ex26/ft_count_if.h"
+
+void	clean_buf(void);
 void	ft_putchar(char c);
+void	ft_putnbr(int nb);
 char	*get_output(void);
 int		int_arr_cmp(int array1[], int array2[], int len);
 
