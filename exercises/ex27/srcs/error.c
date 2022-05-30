@@ -12,18 +12,20 @@
 
 #include "../includes/ft_display_file.h"
 
-char	*err_msg(int err)
+char	*str_err(int errnum)
 {
-	char	*msg[3];
+	char	*err_list[3];
 
-	msg[NO_ARGS] = "File name missing.";
-	msg[UNREADABLE] = "Cannot handle this file properly.";
-	msg[MANY_ARGS] = "Too many arguments.";
-	return (msg[err]);
+	err_list[NO_ARGS] = "File name missing.";
+	err_list[FILE_ERR] = "Cannot handle this file properly.";
+	err_list[MANY_ARGS] = "Too many arguments.";
+	return (err_list[errnum]);
 }
 
-void	log_error(int err)
+void	log_error(int errnum)
 {
-	ft_putstr_fd(err_msg(err), STDERR_FILENO);
+	ft_putstr_fd(BOLD_RED, STDERR_FILENO);
+	ft_putstr_fd(str_err(errnum), STDERR_FILENO);
 	ft_putstr_fd("\n", STDERR_FILENO);
+	ft_putstr_fd(RESET, STDERR_FILENO);
 }

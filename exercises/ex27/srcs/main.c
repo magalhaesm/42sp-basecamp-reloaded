@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		if (ft_display_file(argv[1]) == -1)
-			log_error(UNREADABLE);
+			log_error(FILE_ERR);
 		else
 			return (EXIT_SUCCESS);
 	}
