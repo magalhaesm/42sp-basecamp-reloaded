@@ -12,16 +12,18 @@
 
 #include "../includes/ft_display_file.h"
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
 	if (argc < 2)
-		ft_putstr_fd("File name missing.\n", STDERR_FILENO);
+		log_error(NO_ARGS);
 	else if (argc > 2)
-		ft_putstr_fd("Too many arguments.\n", STDERR_FILENO);
+		log_error(MANY_ARGS);
 	else
 	{
-		ft_display_file(argv[1]);
-		return (EXIT_SUCESS);
+		if (ft_display_file(argv[1]) == -1)
+			log_error(UNREADABLE);
+		else
+			return (EXIT_SUCESS);
 	}
 	return (EXIT_FAILURE);
 }

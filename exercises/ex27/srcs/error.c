@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_file.c                                  :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdias-ma <mdias-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 19:59:58 by mdias-ma          #+#    #+#             */
-/*   Updated: 2022/05/30 01:19:07 by mdias-ma         ###   ########.fr       */
+/*   Created: 2022/05/30 00:38:36 by mdias-ma          #+#    #+#             */
+/*   Updated: 2022/05/30 01:08:47 by mdias-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_display_file.h"
 
-int	ft_display_file(char *pathname)
+char	*err_msg(int err)
 {
-	int		fd;
-	char	buffer;
+	char	*msg[3];
 
-	fd = open(pathname, O_RDONLY);
-	if (fd < 0)
-		return (fd);
-	while (read(fd, &buffer, 1) > 0)
-		write(STDOUT_FILENO, &buffer, 1);
-	close(fd);
-	return (EXIT_SUCESS);
+	msg[NO_ARGS] = "File name missing.";
+	msg[UNREADABLE] = "Cannot open this file.";
+	msg[MANY_ARGS] = "Too many arguments.";
+	return (msg[err]);
+}
+
+void	log_error(int err)
+{
+	ft_putstr_fd(err_msg(err), STDERR_FILENO);
+	ft_putstr_fd("\n", STDERR_FILENO);
 }

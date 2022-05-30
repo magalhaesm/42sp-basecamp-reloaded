@@ -6,7 +6,7 @@
 /*   By: mdias-ma <mdias-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 19:59:48 by mdias-ma          #+#    #+#             */
-/*   Updated: 2022/05/30 00:01:46 by mdias-ma         ###   ########.fr       */
+/*   Updated: 2022/05/30 01:09:24 by mdias-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,15 @@
 #  define EXIT_FAILURE 1
 # endif
 
+enum e_error {
+	NO_ARGS = 0,
+	UNREADABLE = 1,
+	MANY_ARGS = 2,
+};
+
 void	ft_putstr_fd(char *s, int fd);
-int		ft_display_file(char *path);
+int		ft_display_file(char *pathname);
+char	*err_msg(int err);
+void	log_error(int err);
 
 #endif
