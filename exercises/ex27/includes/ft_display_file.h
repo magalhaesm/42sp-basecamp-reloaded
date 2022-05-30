@@ -6,7 +6,7 @@
 /*   By: mdias-ma <mdias-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 19:59:48 by mdias-ma          #+#    #+#             */
-/*   Updated: 2022/05/30 11:55:20 by mdias-ma         ###   ########.fr       */
+/*   Updated: 2022/05/30 12:15:20 by mdias-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@
 #  define EXIT_FAILURE 1
 # endif
 
-# define RESET "\033[m"
-# define BOLD_RED "\033[1;31m"
-
 enum e_error {
 	NO_ARGS = 0,
 	FILE_ERR = 1,
@@ -35,7 +32,6 @@ enum e_error {
 
 void	ft_putstr_fd(char *s, int fd);
 int		ft_display_file(char *pathname);
-char	*str_err(int errnum);
-void	log_error(int errnum);
+void	log_error(int err_num);
 
 #endif

@@ -4,7 +4,7 @@ OBJ_DIR		= objs
 
 INCLUDE		= -I includes
 
-FILES		= ft_display_file.c ft_putstr_fd.c main.c error.c
+FILES		= ft_display_file.c ft_putstr_fd.c main.c errors.c
 
 SRCS		= $(addprefix $(SRC_DIR)/, $(FILES))
 OBJS		= $(subst $(SRC_DIR), $(OBJ_DIR), $(SRCS:.c=.o))
