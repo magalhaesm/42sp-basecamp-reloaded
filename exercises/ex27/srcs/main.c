@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		if (ft_display_file(argv[1]) == -1)
 			log_error(UNREADABLE);
 		else
-			return (EXIT_SUCESS);
+			return (EXIT_SUCCESS);
 	}
 	return (EXIT_FAILURE);
 }

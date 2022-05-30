@@ -17,7 +17,7 @@ char	*err_msg(int err)
 	char	*msg[3];
 
 	msg[NO_ARGS] = "File name missing.";
-	msg[UNREADABLE] = "Cannot open this file.";
+	msg[UNREADABLE] = "Cannot handle this file properly.";
 	msg[MANY_ARGS] = "Too many arguments.";
 	return (msg[err]);
 }

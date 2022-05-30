@@ -6,7 +6,7 @@
 /*   By: mdias-ma <mdias-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 19:59:58 by mdias-ma          #+#    #+#             */
-/*   Updated: 2022/05/30 01:19:07 by mdias-ma         ###   ########.fr       */
+/*   Updated: 2022/05/30 11:19:07 by mdias-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_display_file(char *pathname)
 	while (read(fd, &buffer, 1) > 0)
 		write(STDOUT_FILENO, &buffer, 1);
 	close(fd);
-	return (EXIT_SUCESS);
+	if (fd < 0)
+		return (fd);
+	return (EXIT_SUCCESS);
 }

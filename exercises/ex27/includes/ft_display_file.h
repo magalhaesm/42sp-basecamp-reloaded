@@ -6,7 +6,7 @@
 /*   By: mdias-ma <mdias-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 19:59:48 by mdias-ma          #+#    #+#             */
-/*   Updated: 2022/05/30 01:09:24 by mdias-ma         ###   ########.fr       */
+/*   Updated: 2022/05/30 10:20:11 by mdias-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 
-# ifndef EXIT_SUCESS
-#  define EXIT_SUCESS 0
+# ifndef EXIT_SUCCESS
+#  define EXIT_SUCCESS 0
 # endif
 
 # ifndef EXIT_FAILURE
@@ -28,6 +28,7 @@ enum e_error {
 	NO_ARGS = 0,
 	UNREADABLE = 1,
 	MANY_ARGS = 2,
+	NOT_CLOSED = 3,
 };
 
 void	ft_putstr_fd(char *s, int fd);
