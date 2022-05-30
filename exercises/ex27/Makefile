@@ -1,19 +1,30 @@
 NAME		= ft_display_file
+SRC_DIR		= srcs
+OBJ_DIR		= objs
 
-SRC		= display_file.c
-OBJ		= display_file.o
+INCLUDE		= -I includes
+
+FILES		= ft_display_file.c ft_putstr_fd.c main.c
+
+SRCS		= $(addprefix $(SRC_DIR)/, $(FILES))
+OBJS		= $(subst $(SRC_DIR), $(OBJ_DIR), $(SRCS:.c=.o))
 
 CC		= gcc
 CFLAGS		= -Wall -Wextra -Werror
 RM		= rm -f
 
+$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
+		@mkdir -p $(OBJ_DIR)
+		$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
 all:		$(NAME)
 
-$(NAME):	$(OBJ)
-		${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+$(NAME):	$(OBJS)
+		${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
 clean:
-		$(RM) $(OBJ)
+		$(RM) $(OBJS)
+		$(RM) -r $(OBJ_DIR)
 
 fclean:		clean
 		$(RM) $(NAME)
